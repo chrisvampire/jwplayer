@@ -98,3 +98,17 @@ type (mp3,flv,rtmp,jpg,png,gif,swf,rbs,3gp,mp4,m4v): 播放器会根据文件名
 useaudio (true,false): 设置为false用来改变为静音状态。 usecaption
 
 补充：这个插件是去jwplayer的logo的，正版需要美刀购买，在ie下播放器会使用swf播放器，swf文件内的logo已经删除，在ie9或以上，谷歌、火狐浏览器下，使用的是html5video播放器，只需用开发人员工具找到右上角的jwplayer的logo的类名，隐藏掉即可。如：在添加css：.jwlogo {display:none;}
+
+jwplayer("container").setup({//通过js调用播放器并安装到指定容器（container）内
+
+    flashplayer: "jwplayer/player.swf",//调用播放器
+    file: "video.flv",//调用视频文件
+    width: 328,//播放器宽
+    height: 200,//播放器高
+    aspectratio:"10:6",//自适应宽高比例，如果设置宽高比，可设置宽度100%,高度不用设置
+    image:"jwplayer/preview.jpg",//视频预览图片
+    controlbar: "over",//控制条位置
+    screencolor :"#fff",//播放器颜色
+    repeat:"always",//重复播放
+    autostart:true//自动播放
+});
